@@ -21,5 +21,5 @@ def reverse_arr(arr):
             arr[arr_len] = val
     return arr
 
-print(reverse_arr([1, 2, 3, 4,7,9]))
+print(reverse_arr([1, 2, 3, 4,7,9,8]))
 
