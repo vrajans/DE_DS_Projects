@@ -35,8 +35,28 @@ def removeElement(nums, val):
 
 
 def removeDuplicates(nums):
-    seen = set(nums)
-    return  len(seen)
+    if not nums:
+        return 0
+    
+    i = 0  # slow pointer
+    for j in range(1, len(nums)):
+        if nums[j] != nums[i]:  # found a new unique
+            i += 1
+            nums[i] = nums[j]
+    return i + 1
+
+def removeDuplicates_2(nums):
+    if not nums:
+        return 0
+    
+    i = 0  # slow pointer
+    if len(nums) > 2:        
+        for j in range(1, len(nums)):
+            if nums[j] != nums[i]:  # found a new unique
+                i += 1
+                nums[i+1] = nums[j]
+        return i + 2, nums[:i+2]
+    return len(nums), nums
 
 
-print(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+print(removeDuplicates_2([1,2,3]))
