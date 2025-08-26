@@ -1,3 +1,5 @@
+
+
 def max_arr(arr):
     max_val = arr[0]
     for val in arr:
@@ -21,5 +23,20 @@ def reverse_arr(arr):
             arr[arr_len] = val
     return arr
 
-print(reverse_arr([1, 2, 3, 4,7,9,8]))
+def merge(nums1, m, nums2, n):
+    nums1[m:] = nums2[:n]
+    nums1.sort()
+    return nums1
 
+def removeElement(nums, val):
+    while val in nums:
+        nums.remove(val)
+    return len(nums)
+
+
+def removeDuplicates(nums):
+    seen = set(nums)
+    return  len(seen)
+
+
+print(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
