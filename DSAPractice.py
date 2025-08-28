@@ -23,10 +23,38 @@ def reverse_arr(arr):
             arr[arr_len] = val
     return arr
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+# def removeDuplicates(nums):
+#     nums_new = []
+#     for val in nums:
+#         if val not in nums_new:
+#             nums_new.append(val)
+
+#     return len(nums_new), nums_new
+
+def removeDuplicates(nums):
+    if not nums:
+        return 0
+    i = 0
+    for j in range(1, len(nums)):
+        if nums[j] != nums[i]:
+            i += 1
+            nums[i] = nums[j]
+    return i + 1, nums[:i+1]
+
+print(removeDuplicates([1,1,2]))
+
+#print(reverse_arr([1, 2, 3, 4,7,9]))
+=======
+print(reverse_arr([1, 2, 3, 4,7,9,8]))
+>>>>>>> e6ef39bdbc7ad2b9f01a7b9dc4d7676c145899b0
+=======
 def merge(nums1, m, nums2, n):
     nums1[m:] = nums2[:n]
     nums1.sort()
     return nums1
+>>>>>>> ba1c054bdadf2f7dfaadbd94fa7140d0aed46ae2
 
 def removeElement(nums, val):
     while val in nums:
