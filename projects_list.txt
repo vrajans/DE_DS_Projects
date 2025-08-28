@@ -1,0 +1,19 @@
+Uber Data Analytics using GCP. https://lnkd.in/gqE-Y4HS
+
+2. Olympic Data Analytics using Azure https://lnkd.in/gHNyz_Bg
+
+3. Stock Market Real-time Data Analysis using Kafka https://lnkd.in/gknh7ZEr
+
+4. Twitter Data Pipeline using Airflow https://lnkd.in/g7YPnH7G
+
+5. Smart City End to End project using AWS https://lnkd.in/gh2eWF66
+
+6. Realtime Data Streaming using spark and Kafka https://lnkd.in/gjH2efgz
+
+7. Zillow Data Analytics - Python, ETL https://lnkd.in/gvEVZHPR
+
+8. End to end Azure Project https://lnkd.in/gCVZtNB5
+
+9. End to end project using snowlake https://lnkd.in/g96n6NbA
+
+10. Data pipeline using Data Fusion https://lnkd.in/gR5pkeRw
