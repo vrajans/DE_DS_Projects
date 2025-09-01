@@ -17,3 +17,196 @@
 9. End to end project using snowlake https://lnkd.in/g96n6NbA
 
 10. Data pipeline using Data Fusion https://lnkd.in/gR5pkeRw
+
+
+📌 PySpark:
+– DataFrames & RDDs → lazy evaluation, transformations
+– Partitioning → better data distribution across clusters
+– Joins → broadcast, shuffle, tuning for performance
+– Window functions → row_number, rank, lag/lead
+– Memory management → caching, persistence, garbage collection
+– Performance tricks → predicate pushdown, column pruning, bucketing
+
+📌 SQL:
+– Complex joins → self joins, cross joins, multi-table
+– Advanced aggregations → GROUP BY, ROLLUP, CUBE, GROUPING SETS
+– Window functions → PARTITION BY, ORDER BY, frames
+– CTEs & subqueries → recursive queries, performance tuning
+– Index optimization → execution plans, query tuning
+– Data modeling → normalization, star schema, dimensional modeling
+
+
+Round 1 — SQL + Problem Solving
+
+They hit me with “easy” SQL that wasn’t so easy under pressure:
+1.Find the third highest salary without using LIMIT.
+2.Deduplicate rows keeping the latest by timestamp (window functions).
+3.What’s the performance difference between NOT EXISTS and LEFT JOIN IS NULL?
+4.Write a query to find customers who placed 3 consecutive orders.
+
+📍Round 2 — PySpark & ETL
+
+This is where they probed real-world thinking:
+5. What causes a shuffle in Spark? How do you reduce it?
+6. Difference between repartition() and coalesce().
+7. How would you handle skewed data in a big join?
+8. Design an ETL pipeline to process 1B+ rows daily from Kafka to S3.
+
+📍 Round 3 — System Design + Cloud
+
+This round felt like a product company:
+9. Build a pipeline for real-time fraud detection under 3 seconds latency.
+10. How would you design a data lake vs data warehouse for global users?
+11. How do you ensure GDPR compliance in your data models?
+12. What metrics would you monitor in production?
+
+
+1. Spot the Flaws
+Prompt: Act as a recruiter for [your industry/role]. Review my resume below and highlight weak areas, overused buzzwords, and missing metrics. Be brutally honest.
+
+2. Rewrite for Impact
+Prompt: Rewrite this resume to sound more results-driven, quantifiable, and compelling for [target role]. Focus on achievements, not just duties.
+
+3. ATS Boost
+Prompt: Update this resume to be fully optimized for Applicant Tracking Systems (ATS) for the role of [specific role/title]. Use industry-specific keywords naturally.
+
+4. Craft My Hook
+Prompt: Write a powerful, 3-line professional summary that hooks a recruiter in under 10 seconds. Prioritize impact, clarity, and value.
+
+
+5. Upgrade Experience
+Prompt: Rephrase the experience section to highlight impact, results, and transferable skills using action verbs and quantifiable outcomes.
+
+
+6. Format Fix
+Prompt: Suggest a clean, modern resume format that works for both humans and ATS. No graphics, no columns. Just structured and effective.
+
+7. Tailor for the Role
+Prompt: Tailor this resume to fit this specific job description [paste JD]. Highlight matching experience and reword sections to match the language used.
+
+
+8. Standout Cover Letter
+Prompt: Write a compelling cover letter based on this resume and job description. Keep it personal, enthusiastic, and under 200 words.
+
+Power BI Interview Questions Asked in Wipro:
+
+Q1: How do you create relationships between tables in Power BI?
+I use the model view to drag and drop fields—usually the primary key to the foreign key. I check cardinality and keep relationships single-direction unless needed.
+
+Q2: Difference between star and snowflake schema?
+Star schema has denormalized dimensions—better for performance. Snowflake is normalized—saves space but is slower. I prefer star for Power BI.
+
+Q3: How do you calculate YoY growth in DAX?
+I use SAMEPERIODLASTYEAR with CALCULATE to compare current and previous year, then apply DIVIDE to get the growth percentage.
+
+Q4: CALCULATE vs FILTER in DAX?
+FILTER creates a table with row-level logic. CALCULATE changes context—it can wrap FILTER to apply logic before computing a measure.
+
+Q5: How to create a dynamic date range slicer?
+I create a disconnected table with options like “Last 7 Days”, “This Month” and use a measure with SWITCH and TODAY() to adjust filters dynamically.
+
+Q6: What if a visual shows incorrect data?
+I check relationships, filters, and DAX logic. Also, I verify column granularity—wrong joins or filters often cause issues.
+
+Q7: How do you optimize a slow Power BI report?
+I reduce visuals per page, remove unnecessary columns, use star schema, turn off auto date/time, and use optimized DAX. Aggregations help too.
+
+Q8: How do you use Performance Analyzer?
+I open it from the View tab, click “Start Recording,” and interact with visuals. It shows where time is spent—DAX, visual rendering, or query time.
+
+Q9: Handling complex transformations in Power Query?
+I break them into steps, use staging queries, and avoid row-by-row operations. I also prefer native database queries if possible.
+
+Q10: Difference between merge and append in Power Query?
+Append stacks rows (like UNION), used for similar tables.
+Merge joins columns from two tables (like JOIN in SQL).
+
+Q11: How do you implement Row-Level Security (RLS)?
+I create roles in Power BI Desktop using DAX filters (like [Region] = USERNAME()), publish the report, and assign roles in the Power BI Service.
+
+Q12: What is incremental refresh and how do you set it up?
+It loads only new and changed data. I add RangeStart and RangeEnd parameters, filter the date column in Power Query, then configure it in Power BI Service.
+
+
+For more such interview questions you can check my YouTube channel 👇 
+https://lnkd.in/eT9uu2zX
+
+And for more resources and complete interview question bank👇
+https://lnkd.in/eCGQyKrc
+
+
+✅ What is the difference between data cleaning and data wrangling?
+✅ Explain the steps in a data analysis project.
+✅ How do you handle missing or duplicate data in a dataset?
+✅ What are the different types of joins in SQL?
+✅ How would you explain a complex data insight to a non-technical stakeholder?
+✅ What are the key functions of Excel that every analyst should know?
+✅ Explain the difference between clustered and non-clustered indexes.
+✅ What is the difference between OLAP and OLTP?
+✅ How do you perform time-series analysis?
+✅ Which Python libraries are best for data analysis?
+
+
+𝐃𝐚𝐭𝐚 𝐖𝐚𝐫𝐞𝐡𝐨𝐮𝐬𝐞: 
+Centralized storage for structured, historical data, 
+optimized for querying and analysis.
+
+𝐄𝐓𝐋 (𝐄𝐱𝐭𝐫𝐚𝐜𝐭, 𝐓𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦, 𝐋𝐨𝐚𝐝): 
+Process of extracting data from sources, 
+transforming it, and loading it into the warehouse.
+
+𝐒𝐭𝐚𝐫 𝐒𝐜𝐡𝐞𝐦𝐚: 
+A database design with a central fact table linked to 
+dimension tables (e.g., sales data linked to products, customers, and time).
+
+𝐒𝐧𝐨𝐰𝐟𝐥𝐚𝐤𝐞 𝐒𝐜𝐡𝐞𝐦𝐚: 
+A normalized version of the star schema,
+reducing data redundancy.
+
+𝐃𝐚𝐭𝐚 𝐌𝐚𝐫𝐭: 
+A subset of a data warehouse, focused on a 
+specific business area (e.g., sales or finance).
+
+𝐎𝐋𝐀𝐏 (𝐎𝐧𝐥𝐢𝐧𝐞 𝐀𝐧𝐚𝐥𝐲𝐭𝐢𝐜𝐚𝐥 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠): 
+Enables complex queries and 
+multidimensional analysis (e.g., roll-up, drill-down).
+
+𝐃𝐚𝐭𝐚 𝐋𝐚𝐤𝐞: 
+Stores raw, unstructured, or semi-structured data, 
+complementing the structured data in a warehouse.
+
+𝐃𝐚𝐭𝐚 𝐋𝐚𝐤𝐞𝐡𝐨𝐮𝐬𝐞: 
+Combines the best of data lakes and warehouses, 
+enabling both raw data storage and structured analytics.
+
+
+🔹 SQL
+1️⃣ Customers who purchased in both January & February
+2️⃣ Difference between RANK(), DENSE_RANK(), ROW_NUMBER()
+3️⃣ Handling NULL values in joins
+4️⃣ Finding duplicate records in a table
+5️⃣ EXISTS vs IN – which is faster?
+
+🔹 Power BI
+1️⃣ Handling many-to-many relationships with bridge tables
+2️⃣ Calculated column vs Measure (row context vs filter context)
+3️⃣ Steps to optimize a slow report
+4️⃣ When to use DirectQuery vs Import mode
+5️⃣ DAX formula for Running Total Sales
+
+
+👉 “Can you walk me through a project you worked on?”
+ But many candidates make the mistake of diving straight into technical jargon (SQL queries, Power BI visuals, Python scripts) — and lose the interviewer's attention.
+
+Here’s a proven structure to explain your project like a pro:
+🔹 1. Business Problem (Context):
+ What was the problem or objective? (e.g., reducing customer churn, improving sales forecasting)
+🔹 2. Your Role & Responsibilities:
+ Clearly define what YOU did — data collection, cleaning, analysis, visualization, etc.
+🔹 3. Tools & Techniques Used:
+ Mention tools from your toolkit — SQL for querying, Python for automation, Power BI/Tableau for dashboards, Excel for quick analyses.
+🔹 4. Challenges & Solutions:
+ Did you face data quality issues? How did you solve them? Showcase your problem-solving skills.
+🔹 5. Business Impact & Results:
+ How did your work benefit the business? (e.g., increased efficiency, cost reduction, better decision-making)
+💡 Remember: Companies care about how your data work solved a real problem and added value — not just how many tools you know.
