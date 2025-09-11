@@ -47,14 +47,28 @@ print(removeDuplicates([1,1,2]))
 
 #print(reverse_arr([1, 2, 3, 4,7,9]))
 # =======
+<<<<<<< HEAD
 # print(reverse_arr([1, 2, 3, 4,7,9,8]))
 # >>>>>>> e6ef39bdbc7ad2b9f01a7b9dc4d7676c145899b0
 # =======
+=======
+
+#print(reverse_arr([1, 2, 3, 4,7,9,8]))
+
+# >>>>>>> e6ef39bdbc7ad2b9f01a7b9dc4d7676c145899b0
+# =======
+
+>>>>>>> bb79bc253756c8a4f7f33df28e4b997366ea3c66
 def merge(nums1, m, nums2, n):
     nums1[m:] = nums2[:n]
     nums1.sort()
     return nums1
+<<<<<<< HEAD
 #>>>>>>> ba1c054bdadf2f7dfaadbd94fa7140d0aed46ae2
+=======
+
+# >>>>>>> ba1c054bdadf2f7dfaadbd94fa7140d0aed46ae2
+>>>>>>> bb79bc253756c8a4f7f33df28e4b997366ea3c66
 
 def removeElement(nums, val):
     while val in nums:
@@ -77,14 +91,22 @@ def removeDuplicates_2(nums):
     if not nums:
         return 0
     
-    i = 0  # slow pointer
-    if len(nums) > 2:        
-        for j in range(1, len(nums)):
-            if nums[j] != nums[i]:  # found a new unique
+    i = 2
+    if len(nums) > 2:
+        for j in range(2, len(nums)):
+            if nums[j] != nums[i-2]:
+                nums[i] = nums[j]
                 i += 1
-                nums[i+1] = nums[j]
-        return i + 2, nums[:i+2]
+        return i, nums[:i]
     return len(nums), nums
 
+def majorityElement(nums):
+    count = 0
+    candidate = 0
+    for num in nums:
+        if count == 0:
+            candidate = num
+        count += (1 if num == candidate else -1)
+    return candidate
 
-print(removeDuplicates_2([1,2,3]))
+print(majorityElement([3,2,3]))
