@@ -370,3 +370,31 @@ This round will test your knowledge of your ability to build efficient and scala
 
 👉🏻 Round 5: Behaviour Round
 This round person takes it lightly,y bua t lot of people get rejected here also. You might be technically well-equipped, but if you are not the right fit for the culture, then you might not get the job.
+
+
+
+Python / Programming
+Difference between list, tuple, and set in Python
+How Python handles memory management and garbage collection
+Multithreading vs multiprocessing in Python
+Writing efficient Pandas operations for large datasets
+🔹 SQL & Databases
+Write a query to find the nth highest salary in an Employee table
+Difference between OLTP and OLAP systems
+How indexes work in relational databases and when to use them
+Partitioning vs sharding in large datasets
+🔹 Big Data & ETL
+Difference between batch and streaming data pipelines
+Kafka vs Kinesis: when to use each
+How Spark optimizes jobs under the hood (RDD, DataFrame, Catalyst optimizer)
+Best practices for building resilient ETL pipelines
+🔹 Cloud & Data Warehousing
+Snowflake vs Redshift vs BigQuery: key differences
+How to design a data lake vs a data warehouse
+Role of IAM and data security in cloud environments
+How orchestration works with Apache Airflow
+🔹 Coding Round
+Reverse words in a string without using built-in functions
+Implement a Kafka producer-consumer in Python
+Write an Airflow DAG for a daily ETL job
+Find duplicates in a dataset efficiently
