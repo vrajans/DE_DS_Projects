@@ -47,28 +47,28 @@ print(removeDuplicates([1,1,2]))
 
 #print(reverse_arr([1, 2, 3, 4,7,9]))
 # =======
-<<<<<<< HEAD
+#<<<<<<< HEAD
 # print(reverse_arr([1, 2, 3, 4,7,9,8]))
 # >>>>>>> e6ef39bdbc7ad2b9f01a7b9dc4d7676c145899b0
 # =======
-=======
+#=======
 
 #print(reverse_arr([1, 2, 3, 4,7,9,8]))
 
 # >>>>>>> e6ef39bdbc7ad2b9f01a7b9dc4d7676c145899b0
 # =======
 
->>>>>>> bb79bc253756c8a4f7f33df28e4b997366ea3c66
+#>>>>>>> bb79bc253756c8a4f7f33df28e4b997366ea3c66
 def merge(nums1, m, nums2, n):
     nums1[m:] = nums2[:n]
     nums1.sort()
     return nums1
-<<<<<<< HEAD
+#<<<<<<< HEAD
 #>>>>>>> ba1c054bdadf2f7dfaadbd94fa7140d0aed46ae2
-=======
+#=======
 
 # >>>>>>> ba1c054bdadf2f7dfaadbd94fa7140d0aed46ae2
->>>>>>> bb79bc253756c8a4f7f33df28e4b997366ea3c66
+#>>>>>>> bb79bc253756c8a4f7f33df28e4b997366ea3c66
 
 def removeElement(nums, val):
     while val in nums:
