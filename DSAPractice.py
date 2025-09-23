@@ -23,8 +23,7 @@ def reverse_arr(arr):
             arr[arr_len] = val
     return arr
 
-# <<<<<<< HEAD
-# <<<<<<< HEAD
+
 # def removeDuplicates(nums):
 #     nums_new = []
 #     for val in nums:
@@ -43,7 +42,7 @@ def removeDuplicates(nums):
             nums[i] = nums[j]
     return i + 1, nums[:i+1]
 
-print(removeDuplicates([1,1,2]))
+#print(removeDuplicates([1,1,2]))
 
 #print(reverse_arr([1, 2, 3, 4,7,9]))
 # =======
@@ -55,20 +54,11 @@ print(removeDuplicates([1,1,2]))
 
 #print(reverse_arr([1, 2, 3, 4,7,9,8]))
 
-# >>>>>>> e6ef39bdbc7ad2b9f01a7b9dc4d7676c145899b0
-# =======
 
-#>>>>>>> bb79bc253756c8a4f7f33df28e4b997366ea3c66
 def merge(nums1, m, nums2, n):
     nums1[m:] = nums2[:n]
     nums1.sort()
     return nums1
-#<<<<<<< HEAD
-#>>>>>>> ba1c054bdadf2f7dfaadbd94fa7140d0aed46ae2
-#=======
-
-# >>>>>>> ba1c054bdadf2f7dfaadbd94fa7140d0aed46ae2
-#>>>>>>> bb79bc253756c8a4f7f33df28e4b997366ea3c66
 
 def removeElement(nums, val):
     while val in nums:
@@ -109,4 +99,90 @@ def majorityElement(nums):
         count += (1 if num == candidate else -1)
     return candidate
 
-print(majorityElement([3,2,3]))
+#print(majorityElement([3,2,3]))
+
+#factorial of a number using recursion
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+    
+#print(factorial(5))
+
+#fibonacci series using recursion
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+    
+#print(fibonacci(6))
+
+#factorial of a number using iteration
+def factorial_iter(n):
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+
+#print(factorial_iter(5))
+
+def varath_factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    
+    result = 1  
+    for i in range(1,n+1):
+        result = result * i
+    return result
+
+#print(varath_factorial(5))
+
+
+def varath_fibanaci(n):
+    fib = []
+    result = 0
+    prev = 0
+    cur = 0
+    for i in range(n+1):
+        result = prev + cur
+        fib.append(result)
+        if fib[i] == 0:
+            prev = 0
+            cur = 1
+        else:
+            prev = fib[i-1]
+            cur = fib[i]
+
+    return fib
+
+#print(varath_fibanaci(6))
+
+def is_str_plolyndrom(str):
+    
+    str_poly_chk = ""
+
+    for c in reversed(str):
+        str_poly_chk = str_poly_chk + c
+
+    if str.upper() == str_poly_chk.upper():
+        print("the given sting is polyndrom")
+    else:
+        print("the given string is not polyndrom")
+
+is_str_plolyndrom("Malayalam")
+
+
+def generate_primenumbers(n):
+    prime_numbers = []
+    for i in range(1, n+1):
+        if ((i != 1 and i % 2 != 0) or i==2):
+            if((i%3 != 0 or i==3) and (i%5 != 0 or i==5) and (i%7 != 0 or i==7)):
+                prime_numbers.append(i)
+
+    return prime_numbers
+
+print(generate_primenumbers(200))
