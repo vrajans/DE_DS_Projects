@@ -1,9 +1,13 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
+import os
+from dotenv import load_dotenv
 
-storage_account_name = "conitrendsdatasetvarath"
-storage_account_key = "uXMe+TFGY2YCQj73N3zyYU49CDrKmTDchNmsBLr6+0CKoTwhnNVae7XUkOesqVC8sJaj8WKp+MK7+AStC/cuuA=="
-container_name = "csvdata"
+load_dotenv()
+
+storage_account_name = os.getenv("AZURE_STORAGE_ACCOUNT_NAME")
+storage_account_key = os.getenv("AZURE_STORAGE_KEY")
+container_name = os.getenv("AZURE_CONTAINER")
 
 spark = SparkSession.builder.appName("CryptoDataTransformation").getOrCreate()
 
