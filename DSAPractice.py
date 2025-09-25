@@ -173,7 +173,7 @@ def is_str_plolyndrom(str):
     else:
         print("the given string is not polyndrom")
 
-is_str_plolyndrom("Malayalam")
+#is_str_plolyndrom("Malayalam")
 
 
 def generate_primenumbers(n):
@@ -185,4 +185,41 @@ def generate_primenumbers(n):
 
     return prime_numbers
 
-print(generate_primenumbers(200))
+#print(generate_primenumbers(200))
+
+def reverese_list(org_list):
+    rev_list = []
+    org_list_len = len(org_list)
+    for i in range(org_list_len):
+        rev_list.append(org_list[org_list_len-(i+1)])
+    return rev_list
+
+#print(reverese_list([1,2,3,4,5]))
+
+# def second_largest_num(arr):
+#     for i in range(len(arr)):
+#         val = arr[i]
+#         for j in range(len(arr)):
+#             if (val > arr[j]):
+#                 first_max = val
+#             else:
+#                 first_max = arr[j]
+#     return first_max
+
+def second_largest_num(arr):
+    arr.sort()
+    return arr[-2]
+
+#print(second_largest_num([10,2,13,4,5]))
+
+def remove_duplicates_list(arr):
+    prev = None
+    new_list = []
+    arr.sort()
+    for val in arr:
+        if val != prev:
+            new_list.append(val)
+            prev = val
+    return new_list
+
+print(remove_duplicates_list([1,1,2,2,3,4,4,5,5,5,6]))
