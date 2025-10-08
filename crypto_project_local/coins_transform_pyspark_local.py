@@ -377,7 +377,6 @@ dim_coin.write \
     .option("trustServerCertificate", "true") \
     .save()
 
-
 fact_crypto.write \
     .format("jdbc") \
     .mode("overwrite") \

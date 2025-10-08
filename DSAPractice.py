@@ -223,3 +223,4 @@ def remove_duplicates_list(arr):
     return new_list
 
 print(remove_duplicates_list([1,1,2,2,3,4,4,5,5,5,6]))
+
