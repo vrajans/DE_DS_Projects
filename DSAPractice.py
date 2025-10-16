@@ -222,5 +222,16 @@ def remove_duplicates_list(arr):
             prev = val
     return new_list
 
-print(remove_duplicates_list([1,1,2,2,3,4,4,5,5,5,6]))
+#print(remove_duplicates_list([1,1,2,2,3,4,4,5,5,5,6]))
 
+def two_sum(nums, target):
+    index = []
+    for i in range(len(nums)):
+        for j in range(i+1,len(nums)):
+            val = nums[i] + nums[j]
+            if val == target:
+                index.append(i)
+                index.append(j)
+                return index
+        
+print(two_sum([2,7,11,15],9))
